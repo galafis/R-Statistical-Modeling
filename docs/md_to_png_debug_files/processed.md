@@ -1,0 +1,21 @@
+```mermaid
+graph TD
+    A[User] --> B(Shiny Apps)
+    A --> C(Main Script)
+    B --> D[R Scripts (src/)]
+    C --> D
+    D --> E[Data (data/)]
+    D --> F[Reports (reports/)]
+    D --> G[Tests (tests/)]
+    G --> D
+    F --> H[Documentation (docs/)]
+    subgraph R-Statistical-Modeling Repository
+        B
+        C
+        D
+        E
+        F
+        G
+        H
+    end
+```
